@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 4</title>
+    <script type="text/javascript">
+        // ## Q4
+        // create a function call it strCount that takes
+        // one argument ( an object ) and it counts
+        // the number of the properties which
+        // are string type
+
+        var someObj = {
+            first: "hesham",
+            name: "Linda",
+            basket: ["pen", 2, 4, 5],
+            age: null,
+            isHappy: false
+        }
+
+        function strCount(obj) {
+            var counter = 0;
+
+            for (var i in obj) {
+                // typeof
+                if (typeof obj[i] === "string") {
+                    counter++;
+                } else if (typeof obj[i] === "object") {
+                    counter += strCount(obj[i]);
+                    // counter = counter +  strCount(obj[i]);
+                }
+            }
+
+            return counter;
+        }
+
+        console.log(strCount(someObj));
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

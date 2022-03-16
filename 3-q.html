@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q 3</title>
+    <script type="text/javascript">
+        // ## Q3
+        // Write a function that takes 1 parameter.
+        // on the first call of this function, it remembers it.
+        // on the second call it sums the passed parameter with the parameter passed
+        // during the previous call.
+        // name this function sum
+
+        // example:
+        // sum(3) // 3
+        // sum(5) // 3 + 5 // 8
+        // sum(228) // 8 +  228 // 236
+
+        function sum(x) {
+            // first time
+            //                0  + 3 = 3
+
+            // second time
+            //           3  + 5 = 8
+
+            // third time
+            //           8 + 228 = 236
+            sum.hesham = (sum.hesham || 0) + x;
+            return sum.hesham;
+
+        }
+
+        console.log(sum(3)); // 3
+        console.log(sum(5)); // 8
+        console.log(sum(228)); // 236
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

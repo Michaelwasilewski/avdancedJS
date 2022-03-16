@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Q - 2</title>
+    <script type="text/javascript">
+
+ function countCalls() {
+     countCalls.currentCount = (countCalls.currentCount || 0);
+     return alert("you called me " + ++countCalls.currentCount)
+ }
+
+ countCalls(); // 1
+ countCalls(); // 2
+ countCalls(); // 3
+ console.log(typeof countCalls);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
